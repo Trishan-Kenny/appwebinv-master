@@ -1,0 +1,14 @@
+<?php
+return [
+	'COMMAND_BACKUP' => env('COMMAND_BACKUP'),
+    'DB_DATABASE' => env('DB_DATABASE'),
+    'DB_PASSWORD' => env('DB_PASSWORD'),
+    'DB_USERNAME' => env('DB_USERNAME'),
+    'MAIL_USERNAME' => env('MAIL_USERNAME'),
+    'URL_GENERAL_SHOW' => env('URL_GENERAL_SHOW'),
+    'URL_ADICIONAL_FILTRO' => env('URL_ADICIONAL_FILTRO'),
+    'LOGO_SHOW_MAIL' => env('LOGO_SHOW_MAIL'),
+    
+];
+
+?>

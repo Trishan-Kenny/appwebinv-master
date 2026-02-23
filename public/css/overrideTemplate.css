@@ -1,0 +1,34 @@
+.btn-primary
+{
+	background: #222d32;
+}
+
+.btn-primary:hover
+{
+	background-color: black;
+}
+
+.skin-blue .main-header .navbar
+{
+	background-color: #222d32;
+}
+
+.skin-blue .main-header .logo
+{
+	background-color: #222d32;
+}
+
+.skin-blue .main-header .logo:hover
+{
+	background-color: black;
+}
+
+.skin-blue .main-header .navbar .sidebar-toggle:hover
+{
+	background-color: black;
+}
+
+.skin-blue .main-header li.user-header
+{
+	background-color: #222d32;
+}

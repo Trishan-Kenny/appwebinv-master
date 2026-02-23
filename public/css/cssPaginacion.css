@@ -1,0 +1,41 @@
+.divPaginacion
+{
+	border-bottom: 1px solid transparent;
+	border-top: 1px solid transparent;
+	font-size: 11px;
+	padding: 3px;
+	text-align: right;
+}
+
+.divPaginacion .divPaginacionNumeroPagina
+{
+	border: solid 1px #999999;
+	display: inline-block;
+	margin: 2px;
+	padding: 1px;
+	text-align: center;
+	text-decoration: none;
+	width: 44px;
+}
+
+.divPaginacion .divPaginacionNumeroPagina:hover
+{
+	background-color: #6195ce;
+	color: #ffffff;
+}
+
+.divPaginacion a
+{
+	line-height: 18px;
+}
+
+.divPaginacion .divPaginacionSalto
+{
+	color: #B9618B;
+	text-decoration: none;
+}
+
+.divPaginacion .divPaginacionSalto:hover
+{
+	text-decoration: underline;
+}
