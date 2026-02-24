@@ -85,7 +85,7 @@ class PersonalController extends Controller
 		$parametroBusqueda=$request->has('parametroBusqueda') ? $request->input('parametroBusqueda') : '';
 
 		$paginacion=$this->plataformHelper->prepararPaginacion(TPersonal::with(['tdependencia.tlocal.tdistrito.tprovincia', 'tarea', 'tcargo', 'tsituacion'])->whereRaw('(compareFind(concat(dni, nombre, apellido, correoElectronico), ?, 77)=1)', [$parametroBusqueda]), 7, $paginaActual);
-		
+
 		return view('personal/ver',
 		[
 			'listaTPersonal' => $paginacion['listaRegistros'],
@@ -139,7 +139,7 @@ class PersonalController extends Controller
 		}
 
 		$tPersonal=TPersonal::with(['tdependencia.tlocal.tdistrito'])->find($request->input('codigoPersonal'));
-		
+
 		$listaTDependencia=TDependencia::whereRaw('codigoLocal=?', [$tPersonal->tdependencia->codigoLocal])->orderBy('nombre', 'asc')->get();
 		$listaTLocal=TLocal::whereRaw('codigoDistrito=?', [$tPersonal->tdependencia->tlocal->codigoDistrito])->orderBy('nombre', 'asc')->get();
 		$listaTDistrito=TDistrito::whereRaw('codigoProvincia=?', [$tPersonal->tdependencia->tlocal->tdistrito->codigoProvincia])->orderBy('nombre', 'asc')->get();
@@ -204,6 +204,11 @@ class PersonalController extends Controller
 		]))->setPaper('a4', 'landscape');
 
 		return $pdf->stream();
+	}
+
+	public function actionEliminar()
+	{
+
 	}
 }
 ?>
